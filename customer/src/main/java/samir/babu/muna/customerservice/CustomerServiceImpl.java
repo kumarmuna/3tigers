@@ -14,7 +14,7 @@ public class CustomerServiceImpl {
 	@Autowired
 	RestTemplate restTemplate;
 	
-	@GetMapping
+	@GetMapping("/get")
 	public String getOrder(){
 		String url = "http://order-service/rest/order/service";
 		return restTemplate.getForObject(url, String.class);
