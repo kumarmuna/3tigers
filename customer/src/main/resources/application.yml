@@ -3,6 +3,11 @@
     spring:
       application:
         name: customer-service
+      mvc:
+        view:
+          prefix: /WEB-INF/view/
+          suffix: .jsp
+        static-path-pattern: /resources/**
 
     # Discovery Server Access
     eureka:
@@ -13,6 +18,8 @@
     # HTTP Server (Tomcat) Port
     server: 
       port: 8072
+
+    
 
     # Disable Spring Boot's "Whitelabel" default error page, so we can use our own
     error:
